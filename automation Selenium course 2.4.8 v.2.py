@@ -25,6 +25,8 @@ with webdriver.Chrome() as driver:
     inp = driver.find_element(By.ID, 'answer')
     inp.send_keys(eq)
     driver.find_element(By.ID, 'solve').click()
+    alert_ = driver.switch_to.alert
+    print(alert_.text)
 
     time.sleep(10)
 
